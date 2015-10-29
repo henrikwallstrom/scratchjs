@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Counter example</title>
+    <script src="..\dist\scratch.js"></script>
+
+    <script>
+      function ready(fn) {
+        if (document.readyState != 'loading'){
+          fn();
+        } else {
+          document.addEventListener('DOMContentLoaded', fn);
+        }
+      }
+
+      ready(function() {
+        var counter = function() {
+          var count = 0;
+
+          var that = window.widget({});
+
+          that.renderContentOn = function(html) {
+            html.span('' + count);
+            html.button({click: function() { count++; that.update();}}, '+');
+            html.button({click: function() { count--; that.update();}}, '-')
+          };
+
+          return that;
+        }
+        counter().appendTo('BODY');
+      })
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

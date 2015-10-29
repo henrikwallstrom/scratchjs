@@ -1,0 +1,14 @@
+{
+  "libs": [
+    "jquery"
+  ],
+  "loadEagerly": [
+    "./"
+  ],
+  "dontLoad": [
+    "./dist/",
+    "./node_modules/"
+  ],
+  "plugins": {
+  }
+}
