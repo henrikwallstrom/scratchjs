@@ -1,6 +1,6 @@
 require('./style.css');
 import todo from './todo.js';
-
+import anotherTodo from './anotherCounter.js';
 
 function ready(fn) {
   if (document.readyState != 'loading'){
@@ -12,4 +12,5 @@ function ready(fn) {
 
 ready(function() {
   todo().appendTo(document.body);
+  anotherTodo().appendTo(document.body);
 });

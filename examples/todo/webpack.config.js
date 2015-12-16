@@ -20,6 +20,10 @@ module.exports = {
       '../../src'
 		]
 	},
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
 
   module: {
     loaders: [

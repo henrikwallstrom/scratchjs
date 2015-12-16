@@ -73,8 +73,7 @@ export const remove = (element) => element.parentNode.removeChild(element);
 
 export const replaceWith = (element, el) => {
   let parent = element.parentNode;
-  parent.removeChild(element);
-  parent.appendChild(el);
+  parent.replaceChild(el, element);
 };
 
 export const contains = (element, child) => element.contains(child);

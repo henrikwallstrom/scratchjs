@@ -1,12 +1,12 @@
 import {widget} from 'scratchjs';
 
-let counter = () => {
+let anotherCounter = () => {
   let count = 0;
 
   let that = widget({});
 
   that.renderContentOn = (html) => {
-    html.h1('TODO');
+    html.h1('Another');
     html.span('' + count);
     html.button({click: function() { count++; that.update();}}, '+');
     html.button({click: function() { count--; that.update();}}, '-');
@@ -15,4 +15,4 @@ let counter = () => {
   return that;
 };
 
-export default counter;
+export default anotherCounter;
